@@ -1,0 +1,9 @@
+﻿ul li{
+    list-style:none;
+    list-style-type:none;
+}
+
+a.listLink {
+    text-decoration: none;
+    color: #000;
+}
