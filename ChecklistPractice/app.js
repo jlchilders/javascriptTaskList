@@ -16,3 +16,5 @@ addItemButton.addEventListener('click', () => {
 });
 
 //strikethrough selected list item and move to bottom of list
+
+//color code?
