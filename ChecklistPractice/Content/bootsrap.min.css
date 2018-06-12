@@ -242,7 +242,7 @@ button {
     }
 
 input, button, select, optgroup, textarea {
-    margin: 0;
+    margin: 2em;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit
