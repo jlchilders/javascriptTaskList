@@ -1,36 +1,37 @@
-﻿const listDiv = document.querySelector('.list');
+﻿const listDiv = document.querySelector('#list');
 const addItemButton = document.querySelector('#addItem');
 const addListText = document.querySelector('input.addListText');
 const listLink = document.querySelector('.listLink');
 const listUl = listDiv.querySelector('ul');
 const lis = listUl.children;
-5
+
 addItemButton.addEventListener('click', () => {
     let ul = document.getElementsByTagName('ul')[0];
     let li = document.createElement('li');
     li.id = 'listLink';
-    li.className = 'active';
+    li.className = 'list-group-item active';
     li.textContent = addListText.value;
     ul.appendChild(li);
     addListText.value = '';
 
     //Create delete button
-    let buttonDelete = document.createElement('button');
-    buttonDelete.className = 'delete';
-    buttonDelete.textContent = 'x';
-    li.appendChild(buttonDelete);
+    let linkDelete = document.createElement('button');
+    linkDelete.className = 'delete btn-link float-right';
+    linkDelete.setAttribute('href', '#');
+    linkDelete.textContent = 'x';
+    li.appendChild(linkDelete);
     
     //Create checkbox
     let check = document.createElement('input');
     check.setAttribute('type', 'checkbox');
-    check.className = 'check';
+    check.className = 'check list-group-item';
     li.appendChild(check);
 
 });
 
  
 listUl.addEventListener('click', (e) => {
-    if (e.target.className == 'check') {
+    if (e.target.className == 'check list-group-item') {
         let check = e.target;
         if (check.checked == true) {
             let li = e.target.parentNode;
@@ -38,6 +39,7 @@ listUl.addEventListener('click', (e) => {
             li.style.color = 'lightgray';
             li.style.textDecoration='line-through';
             ul.appendChild(li);
+            li.appendChild(linkDelete);
         }
         else {
             let li = e.target.parentNode;
@@ -50,6 +52,8 @@ listUl.addEventListener('click', (e) => {
 
     }
 });
+
+//TODO: Add event listener for delete button
 
 
 
