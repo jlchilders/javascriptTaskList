@@ -5,25 +5,24 @@
 ul li {
     list-style: none;
     list-style-type: none;
-    margin-top: .5em;
-    margin-bottom: .75em;
+    margin-top: .5rem;
+    margin-bottom: .75rem;
+    margin-left: 1rem;
     align-items:center;
     font-size:1.25rem;
 }
 
 ul li button.delete {
-    margin-left:4em;
+    margin-left:4rem;
     border-width:0px;
 }
-
 
 
 input.check {
     float: left;
     display: inline;
-    text-align:left;
-    margin-right: 2em;
-    margin-top: .5em;
+    margin-right: 2rem;
+    margin-top: .5rem;
     width: 1.25rem;
     height: 1.25rem;
 }

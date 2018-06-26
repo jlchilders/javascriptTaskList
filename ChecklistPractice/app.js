@@ -17,7 +17,6 @@ addItemButton.addEventListener('click', () => {
     //Create delete button
     let linkDelete = document.createElement('button');
     linkDelete.className = 'delete btn-link float-right';
-    linkDelete.setAttribute('href', '#');
     linkDelete.textContent = 'x';
     li.appendChild(linkDelete);
     
@@ -41,7 +40,7 @@ listUl.addEventListener('click', (e) => {
             ul.appendChild(li);
             li.appendChild(linkDelete);
         }
-        else {
+        if (check.checked == false) {
             let li = e.target.parentNode;
             let ul = li.parentNode;
             li.style.color = 'black';
@@ -51,9 +50,14 @@ listUl.addEventListener('click', (e) => {
         }
 
     }
+
+    if (e.target.className =='delete btn-link float-right') {
+        let li = e.target.parentNode;
+        let ul = li.parentNode;
+        ul.removeChild(li);
+    }
 });
 
-//TODO: Add event listener for delete button
 
 
 
